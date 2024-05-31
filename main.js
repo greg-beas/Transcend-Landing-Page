@@ -45,9 +45,10 @@ closeButton.addEventListener('click', () => {
 const videoDialog = document.getElementById('video-modal');
 const videoOpen = document.getElementById('video-modal-button');
 const videoClose = document.getElementById('video-close');
+const videoIFrame = document.getElementById('video-frame');
 
 const stopVideo = () => {
-  
+  videoIFrame.src = videoIFrame.src;
 }
 
 videoOpen.addEventListener('click', () => {
@@ -55,5 +56,6 @@ videoOpen.addEventListener('click', () => {
 })
 
 videoClose.addEventListener('click', () => {
+  stopVideo();
   videoDialog.close();
 })
